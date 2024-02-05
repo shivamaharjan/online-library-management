@@ -6,6 +6,8 @@ import "./auth.css"
 import { toast } from 'react-toastify';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../config/firebase-config';
+import { useDispatch } from 'react-redux';
+import { getUserInfoAction } from '../../redux/auth/authAction';
 
 function Login() {
     const inputs = [
@@ -26,6 +28,7 @@ function Login() {
     ];
 
     const [formData, setFormData] = useState({});
+    const dispatch = useDispatch();
 
     const handleOnChange = (e) => {
         const{name, value} = e.target;
@@ -46,9 +49,9 @@ function Login() {
       const { user } = await signInPromise;
       const userId = user.uid;
       toast.success("Login in Successful");
-    //   // pull the user info from DB
-    //   dispatch(getUserInfoAction(userId));
-    //   // Set it to Store
+      // pull the user info from DB
+      dispatch(getUserInfoAction(userId));
+      // Set it to Store
 
         } catch (e){
             toast.error(`Something went wrong ${e.message}`)
