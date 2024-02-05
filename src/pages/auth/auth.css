@@ -1,0 +1,51 @@
+.form-container {
+  padding: 2rem;
+  max-width: 600px;
+  min-width: 300px;
+  margin: 2rem auto;
+  background: linear-gradient(
+    rgba(228, 135, 135, 0.1), /* Adjust opacity here */
+    rgba(129, 214, 187, 0.1)  /* Adjust opacity here */
+  );
+  border-radius: 2rem;
+}
+
+@media screen and (max-width: 520px) {
+    .form-container{
+        margin: 1rem 2rem;
+    }
+}
+
+.custom-button {
+    background-color: aquamarine;
+}
+
+.login-box{
+    margin-top: 6rem;
+}
+
+/* Additional styles for button hover effect */
+.custom-button:hover {
+    background-color: lightblue; /* Change color on hover */
+    color: white; /* Text color on hover */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Additional styles for input fields */
+.form-control {
+    border-radius: 0.5rem; /* Adjust input field border radius */
+    margin-bottom: 1rem; /* Add spacing between input fields */
+    box-shadow: none; /* Remove default box shadow */
+}
+
+/* Additional styles for form labels */
+.form-label {
+     /* Make labels bold */
+    color: #333; /* Set label color */
+}
+
+/* Additional styles for form submission */
+.form-submit {
+    margin-top: 1rem; /* Add margin above the submit button */
+    text-align: center; /* Center the submit button */
+}

@@ -6,3 +6,8 @@
     max-height: 60vh;
     object-fit: cover;
 }
+
+.caption-box{
+    background: rgba(255, 255, 255, 0.246);
+    border-radius: 1.6rem;
+}

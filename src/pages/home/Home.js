@@ -20,8 +20,6 @@ function Home() {
         </Col>
       </Row>
     </Container>
-
-        
        </DefaultLayout>
     </div>
   )

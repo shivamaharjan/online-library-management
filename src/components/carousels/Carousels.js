@@ -10,24 +10,24 @@ function Carousels() {
         <Carousel>
             <Carousel.Item>
                 <img src={img1} alt="First Slide" className='w-100' />
-                <Carousel.Caption>
-                    <h3>Read Book, Be happy!</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <Carousel.Caption className='caption-box text-black'>      
+                    <h3>Albert Einstein</h3>
+                    <p>The only thing you absolutely have to know is the location of the library.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <img src={img2} alt="Second Slide" className='w-100' />
-                <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <Carousel.Caption className='caption-box text-black'>
+                    <h3>Charles William Eliot</h3>
+                    <p>Books are the quietest and most constant of friends; they are the most accessible and wisest of counselors, and the most patient of teachers.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <img src={img3} alt="Third Slide" className='w-100' />
-                <Carousel.Caption>
-                    <h3>Third slide label</h3>
+                <Carousel.Caption className='caption-box text-black'>
+                    <h3>J.K. Rowling</h3>
                     <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                    When in doubt, go to the library.
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
