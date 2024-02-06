@@ -54,9 +54,11 @@ const inputs = [
 ];
 
 function AdminSignUp() {
-  const [formData, setFormData] = useState({});
-  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    role:"admin"
 
+  });
+  const navigate = useNavigate();
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });

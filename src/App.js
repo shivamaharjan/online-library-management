@@ -11,6 +11,9 @@ import "./App.css"
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Login from "./pages/auth/Login";
+import PublicSignUp from "./pages/auth/PublicSignUp";
+import PrivateRoute from "./components/privateRoute/PrivateRoute";
+import ResetPassword from "./pages/auth/ResetPassword";
 
 
 function App() {
@@ -18,11 +21,41 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/sign-up" element={<AdminSignUp />}></Route>
+        <Route path="/reset-password" element={<ResetPassword/>}></Route>
+        <Route
+          path="/admin-signup"
+          element={
+            <PrivateRoute>
+              <AdminSignUp />
+            </PrivateRoute>
+          }
+        ></Route>
+        <Route path="/sign-up" element={<PublicSignUp />}></Route>
         <Route path="/login" element={<Login />}></Route>
-        <Route path="/books" element={<Books />}></Route>
-        <Route path="/clients" element={<Clients />}></Route>
-        <Route path="/dashboard" element={<Dashboard />}></Route>
+        <Route
+          path="/books"
+          element={
+            <PrivateRoute>
+              <Books />
+            </PrivateRoute>
+          }
+        ></Route>
+        <Route
+          path="/clients"
+          element={
+            <PrivateRoute>
+              <Clients />
+            </PrivateRoute>
+          }
+        ></Route>
+        <Route
+          path="/dashboard"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        ></Route>
         <Route path="/history" element={<History />}></Route>
       </Routes>
 
