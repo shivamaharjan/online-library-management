@@ -14,6 +14,7 @@ import Login from "./pages/auth/Login";
 import PublicSignUp from "./pages/auth/PublicSignUp";
 import PrivateRoute from "./components/privateRoute/PrivateRoute";
 import ResetPassword from "./pages/auth/ResetPassword";
+import AddBooks from "./pages/books/AddBooks";
 
 
 function App() {
@@ -37,6 +38,14 @@ function App() {
           element={
             <PrivateRoute>
               <Books />
+            </PrivateRoute>
+          }
+        ></Route>
+         <Route
+          path="/add-books"
+          element={
+            <PrivateRoute>
+              <AddBooks />
             </PrivateRoute>
           }
         ></Route>
