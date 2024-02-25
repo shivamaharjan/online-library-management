@@ -11,9 +11,12 @@ function Books() {
       <hr />
       <div>
         <Link to="/add-books">
-        <Button>Add Books</Button></Link>
+          <Button type="submit" variant="dark">
+            Add Books
+          </Button>
+        </Link>
       </div>
-      <BookTable/>
+      <BookTable />
     </AdminLayout>
   );
 }

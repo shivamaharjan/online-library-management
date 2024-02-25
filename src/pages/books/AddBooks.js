@@ -7,7 +7,9 @@ import { addNewBookAction } from "../../redux/books/bookAction";
 import { useDispatch } from "react-redux";
 
 function AddBooks() {
-  const [formData, setFormData] = useState({});
+   const [formData, setFormData] = useState({
+     isAvailable: true,
+   });
   const dispatch = useDispatch();
 
 

@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import React from "react";
+import React, { useEffect } from "react";
 import Home from "./pages/home/Home";
 import AdminSignUp from "./pages/auth/AdminSignUp";
 import Books from "./pages/books/Books";
@@ -15,9 +15,19 @@ import PublicSignUp from "./pages/auth/PublicSignUp";
 import PrivateRoute from "./components/privateRoute/PrivateRoute";
 import ResetPassword from "./pages/auth/ResetPassword";
 import AddBooks from "./pages/books/AddBooks";
+import { useDispatch } from "react-redux";
+import { getAllBookAction } from "./redux/books/bookAction";
 
 
 function App() {
+
+
+    const disptach = useDispatch();
+    // Dispatch action to pull data from firebase
+    // and put it in Store
+    useEffect(() => {
+      disptach(getAllBookAction());
+    }, []);
   return (
     <div>
       <Routes>
